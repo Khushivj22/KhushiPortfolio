@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8" />
+    <!--[if IE
+      ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    /><![endif]-->
+    <title>Khushi - Portfolio</title>
+    <meta name="description" content="Khushi" />
+
+    <meta name="keywords" content="" />
+    <meta name="author" content="KhushiVijay" />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap-select.min.css" />
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="asset/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="asset/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="asset/css/odometer.min.css" />
+    <link rel="stylesheet" type="text/css" href="asset/css/lightbox.min.css" />
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="asset/css/animate.min.css" />
+
+    <!-- Font -->
+    <link rel="stylesheet" href="asset/font/fonts.css" />
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="asset/icons/icomoon/style.css" />
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="asset/images/section/signature-1.png">
+    <link rel="apple-touch-icon-precomposed" href="asset/images/section/signature-1.png">
+</head>
+<style>
+    /* Font Awesome CDN */
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+    .works-wrap .works-item .content .title {
+        font-size: 30px;
+    }
+.works-wrap .works-item .image img{
+    background: #fff;
+}
+    .works-item {
+        height: 100%;
+    }
+
+    .works-item {
+        height: 100%;
+    }
+
+    .works-wrap .works-item .image {
+        height: 360px;
+    }
+
+    .filter-menu {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        gap: 15px;
+        border-radius: 100px !important;
+        padding: 10px;
+    }
+
+    .filter-menu button {
+        border: none;
+        background: transparent;
+        color: #fff;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 2rem;
+        position: relative;
+        border-radius: 100px;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .filter-menu button:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .filter-menu button.active {
+        background: linear-gradient(135deg, #7c3aed, #c084fc);
+        color: #fff;
+        box-shadow: 0 0 10px rgba(124, 58, 237, 0.6);
+    }
+
+    .works-item-wrapper {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.5s ease;
+    }
+
+    .works-item-wrapper.hide {
+        opacity: 0;
+        transform: scale(0.8);
+        pointer-events: none;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden;
+        display: none;
+    }
+
+    /* Scroll animation */
+    @keyframes scrollLeft {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .works-item-wrapper.animate {
+        animation: fadeZoom 0.6s ease forwards;
+    }
+
+    @keyframes fadeZoom {
+        from {
+            opacity: 0;
+            transform: scale(0.7) translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+</style>
+
+<body class="counter-scroll" data-color-primary="color-primary-4">
+    <!-- Start Wrapper -->
+    <div id="wrapper">
+        <video class="body-overlay" muted autoplay loop playsinline>
+            <source src="asset/images/bg-3d/video5.mp4" type="video/mp4" />
+        </video>
+
+        <!-- section-selected-works -->
+        <section class="section-selected-works mt-4" id="works ">
+            <div class="tf-container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="banner-slider">
+                            <div class="text-container scroll-banners effect-right"
+                                style="animation: scrollLeft 15s linear infinite">
+                                <span class="banner-text style-1 text-display-2 fw-medium">Web Design</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-2 text-display-2 fw-medium">App Design</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-3 text-display-2 fw-medium">UI/UX Projects</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-4 text-display-2 fw-medium">Brand Logos</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-5 text-display-2 fw-medium">Creative Banners</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-6 text-display-2 fw-medium">AI Tools</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                                <span class="banner-text style-7 text-display-2 fw-medium">Marketing Designs</span>
+                                <span class="banner-img"><span class="dot-circle"></span></span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-5">
+                            <div class="gallery-btn">
+                                <a href="index.html" class="text-body-2 m-0 fw-medium">
+                                    Back Home
+                                    <i class="icon icon-arrow-top-right"></i>
+                                </a>
+                            </div>
+                            <div class="filter-tabs text-center ">
+                                <ul class="filter-menu d-inline-flex align-items-center p-2 rounded-4 shadow-lg"
+                                    id="filterNav">
+                                    <li>
+                                        <button class="active" data-filter="all">
+                                            <i class="fas fa-border-all"></i> All
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-filter="creatives">
+                                            <i class="fas fa-lightbulb"></i> Creatives
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-filter="logos">
+                                            <i class="fas fa-pen-nib"></i> Logos
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-filter="web">
+                                            <i class="fas fa-globe"></i> Web
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-filter="banners">
+                                            <i class="fas fa-image"></i> Banners
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="works-wrap row flex-row gap-0">
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect effectBottom">
+                                    <a class="image" href="asset/images/gallery/AI Mart_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/AI Mart_Box P.png"
+                                            data-src="asset/images/gallery/AI Mart_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">Helve Tica Website Redesign</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect effectBottom">
+                                    <a class="image" href="asset/images/gallery/AIColorStore_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/AIColorStore_Box P.png"
+                                            data-src="asset/images/gallery/AIColorStore_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">Helve Tica Website Redesign</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect effectBottom">
+                                    <a class="image" href="asset/images/gallery/ALLStackAI_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/ALLStackAI_Box P.png"
+                                            data-src="asset/images/gallery/ALLStackAI_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Mobile App Design</div>
+                                            <h3 class="title">
+                                                <a href="#">X-direct Mobile</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="banners">
+                                <div class="works-item scrolling-effect effectBottom">
+                                    <a class="image" href="asset/images/gallery/ALLStackAI_Thumbnail.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/ALLStackAI_Thumbnail.png"
+                                            data-src="asset/images/gallery/ALLStackAI_Thumbnail.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect effectBottom">
+                                    <a class="image" href="asset/images/gallery/ArtGenieAI_ Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/ArtGenieAI_ Box P.png"
+                                            data-src="asset/images/gallery/ArtGenieAI_ Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/AutoAliStores_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/AutoAliStores_Box P.png"
+                                            data-src="asset/images/gallery/AutoAliStores_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="banners">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/AutoAliStores_Thumbnail.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/AutoAliStores_Thumbnail.png"
+                                            data-src="asset/images/gallery/AutoAliStores_Thumbnail.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="banners">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/Banner 1.png" data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/Banner 1.png"
+                                            data-src="asset/images/gallery/Banner 1.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/Conversly_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/Conversly_Box P.png"
+                                            data-src="asset/images/gallery/Conversly_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/EngagifyAI_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/EngagifyAI_Box P.png"
+                                            data-src="asset/images/gallery/EngagifyAI_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/LocalGenieAI_box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/LocalGenieAI_box P.png"
+                                            data-src="asset/images/gallery/LocalGenieAI_box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/Reels2leads Product Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/Reels2leads Product Box P.png"
+                                            data-src="asset/images/gallery/Reels2leads Product Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/Sheppard_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/Sheppard_Box P.png"
+                                            data-src="asset/images/gallery/Sheppard_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/TutoricAI_box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/TutoricAI_box P.png"
+                                            data-src="asset/images/gallery/TutoricAI_box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="banners">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/TutoricAI_Thumbnail.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/TutoricAI_Thumbnail.png"
+                                            data-src="asset/images/gallery/TutoricAI_Thumbnail.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/VidioGenieAI_Box P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/VidioGenieAI_Box P.png"
+                                            data-src="asset/images/gallery/VidioGenieAI_Box P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/AI ColorStore_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/AI ColorStore_Logo P.png"
+                                            data-src="asset/images/logo-gallery/AI ColorStore_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/ALLStackAI_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/ALLStackAI_Logo P.png"
+                                            data-src="asset/images/logo-gallery/ALLStackAI_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/Arovan_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/Arovan_Logo P.png"
+                                            data-src="asset/images/logo-gallery/Arovan_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/AutoAliStores_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/AutoAliStores_Logo P.png"
+                                            data-src="asset/images/logo-gallery/AutoAliStores_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/ConverslyAi_logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/ConverslyAi_logo P.png"
+                                            data-src="asset/images/logo-gallery/ConverslyAi_logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/LocalGenieAI_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/LocalGenieAI_Logo P.png"
+                                            data-src="asset/images/logo-gallery/LocalGenieAI_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/Sheppard_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/Sheppard_Logo P.png"
+                                            data-src="asset/images/logo-gallery/Sheppard_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/Tutoric AI_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/Tutoric AI_Logo P.png"
+                                            data-src="asset/images/logo-gallery/Tutoric AI_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4 works-item-wrapper" data-category="logos">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/logo-gallery/VID Intel AI_Logo P.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/logo-gallery/VID Intel AI_Logo P.png"
+                                            data-src="asset/images/logo-gallery/VID Intel AI_Logo P.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/Feature Img.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/Feature Img.png"
+                                            data-src="asset/images/gallery/Feature Img.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/BB Img Jv 1.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/BB Img Jv 1.png"
+                                            data-src="asset/images/gallery/BB Img Jv 1.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/BB Img Jv 2.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/BB Img Jv 2.png"
+                                            data-src="asset/images/gallery/BB Img Jv 2.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/FE BB Img 2.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/FE BB Img 2.png"
+                                            data-src="asset/images/gallery/FE BB Img 2.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-6 mb-4 works-item-wrapper" data-category="creatives">
+                                <div class="works-item scrolling-effect">
+                                    <a class="image" href="asset/images/gallery/FE1.png"
+                                        data-lightbox="example-1">
+                                        <img class="lazyload" src="asset/images/gallery/FE1.png"
+                                            data-src="asset/images/gallery/FE1.png" alt="" />
+                                    </a>
+                                    <div class="content">
+                                        <div class="infor">
+                                            <div class="sub-heading sub">Website Design</div>
+                                            <h3 class="title">
+                                                <a href="#">UIXDR Agency Website</a>
+                                            </h3>
+                                            <a href="#" class="link date text-body-2 type-tags">May 2024</a>
+                                        </div>
+                                        <a href="#" class="btn-links">
+                                            <i class="icon icon-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="box-gradient1 img_bg-1"></div>
+        <!-- /section-selected-works -->
+    </div>
+    <!-- End Wrapper -->
+    <button id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="11" stroke="white" stroke-width="2" opacity="0.18" />
+            <path d="M12 17V7M12 7L7 12M12 7l5 5" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+    <!-- Javascript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script src="asset/js/jquery.min.js"></script>
+    <script src="asset/js/jquery.validate.min.js"></script>
+    <script src="asset/js/lazysize.min.js"></script>
+    <script src="asset/js/wow.min.js"></script>
+    <script src="asset/js/swiper-bundle.min.js"></script>
+    <script src="asset/js/swiper.js"></script>
+    <script src="asset/js/gsap.min.js"></script>
+    <script src="asset/js/Splitetext.js"></script>
+    <script src="asset/js/ScrollTrigger.min.js"></script>
+    <script src="asset/js/ScrollSmooth.js"></script>
+    <script src="asset/js/handleeffectgsap.js"></script>
+    <script src="asset/js/odometer.min.js"></script>
+    <script src="asset/js/counter.js"></script>
+
+    <script src="asset/js/infinityslide.js"></script>
+    <script src="asset/js/plugin.js"></script>
+    <script src="asset/js/lightbox.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <!-- /Javascript -->
+    <script>
+        window.addEventListener("scroll", function () {
+            document.getElementById("backToTop").style.display =
+                window.scrollY > 300 ? "flex" : "none";
+        });
+        document.getElementById("backToTop").onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll("#filterNav button");
+            const items = document.querySelectorAll(".works-item-wrapper");
+
+            filterButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    filterButtons.forEach((b) => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    const filter = btn.getAttribute("data-filter");
+
+                    let delay = 0;
+                    items.forEach((item) => {
+                        const category = item.getAttribute("data-category");
+                        if (filter === "all" || category === filter) {
+                            item.classList.remove("hide");
+                            item.classList.remove("animate");
+                            setTimeout(() => {
+                                item.classList.add("animate");
+                            }, delay);
+                            delay += 100;
+                        } else {
+                            item.classList.add("hide");
+                            item.classList.remove("animate");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
