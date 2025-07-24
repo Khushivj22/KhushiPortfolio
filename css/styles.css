@@ -3478,6 +3478,7 @@ header .mobile-menu {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding: 50px;
 }
 .section-partners .partners-item.type-lg {
   width: 254px;
