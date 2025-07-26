@@ -193,19 +193,35 @@
         });
     }
 
-    // settings_color
-    var settings_color = function () {
-        $(".settings-color a").on("click", function () {
-            var index =  $(this).index() + 1;
-            $("body").attr("data-color-primary", "color-primary-" + index);
-        })
+
+
+     // canvas
+    var canvas = function () {
+        $(".tf-btn-menu").on("click", function () {
+            $(".tf-sidebar-menu").addClass("active");
+        });
+        $(".btn-setting-color").on("click", function () {
+            $(".tf-setting-color").addClass("active");
+        });
+
+        $(".close-canvas").on("click", function () {
+            $(this).closest('.tf-canvas').removeClass("active");
+        });
+        $(".overlay").on("click", function () {
+            $(this).closest('.tf-canvas').removeClass("active");
+        });
+
+        $(".tf-sidebar-menu .sidebar-nav a").on("click", function () {
+            $(this).closest('.tf-canvas').removeClass("active");
+        });
     }
+
 
     // Dom Ready
     $(function () {
         animateText();
         tabs();
-        
+        canvas();
         infiniteSlide();
         stickyTabs();
         active_item();
