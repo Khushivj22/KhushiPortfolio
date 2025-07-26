@@ -3478,6 +3478,7 @@ header .mobile-menu {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding: 50px;
 }
 .section-partners .partners-item.type-lg {
   width: 254px;
@@ -4569,4 +4570,40 @@ header .mobile-menu {
   /* padding: 24px; */
     height: auto;
     object-fit: contain;
+}
+
+
+
+.gallery-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 3px 3px 23px;
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  border-radius: 99px;
+width: 200px;
+margin: 40px auto;
+}
+.gallery-btn a .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  color: #111111;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.gallery-btn  a .icon,
+.gallery-btn  a .text {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.gallery-btn a:hover .icon,
+.gallery-btn a:hover .text {
+  color: var(--primary);
 }
