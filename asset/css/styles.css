@@ -2830,7 +2830,7 @@ header .mobile-menu {
 }
 
 .indicators .list-tags {
-  max-width: 363px;
+  /* max-width: 363px;   */
   margin-bottom: 64px;
 }
 .indicators .indicators-wrap {
@@ -2995,6 +2995,7 @@ header .mobile-menu {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   letter-spacing: 0;
+  cursor: pointer;
 }
 .experiences-wrap .item:hover {
   border-color: var(--primary);
@@ -4607,3 +4608,27 @@ margin: 40px auto;
 .gallery-btn a:hover .text {
   color: var(--primary);
 }
+
+
+
+
+/* =----------------- */
+
+
+
+  .details {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .details ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    margin-left: 30px;
+  }
+
+  .details li {
+    list-style: disc;
+    font-size: 20px;
+    line-height: 1.6;
+  }
