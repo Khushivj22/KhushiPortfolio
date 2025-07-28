@@ -28,7 +28,8 @@ if (document.querySelector(".slider-playground")) {
           if (entry.isIntersecting) {
             swiper.autoplay.stop(); 
           } else {
-            swiper.autoplay.stop(); 
+            swiper.autoplay.start
+            (); 
           }
         });
       },
@@ -42,7 +43,7 @@ if (document.querySelector(".slider-playground")) {
         swiper.autoplay.stop();
     });
     sliderElement.addEventListener("mouseleave", () => {
-        swiper.autoplay.stop();
+        swiper.autoplay.start();
     });
 }
 
@@ -192,7 +193,6 @@ if (".section-testimonial".length > 0) {
   
 
 }
-
 if (document.querySelector(".slider-partners")) {
     const swiper = new Swiper(".slider-partners", {
         slidesPerView: "auto",
@@ -267,7 +267,7 @@ if (document.querySelector(".slider-partners2")) {
     sliderElement.addEventListener("mouseleave", () => {
         swiper.autoplay.start();
     });
-}
+} 
 
 if (document.querySelector(".slider-process")) {
     const swiper = new Swiper(".slider-process", {
